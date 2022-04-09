@@ -1,7 +1,13 @@
 package book
 
+import (
+	"context"
+
+	"github.com/quazar2000/ca-library-app/internal/domain/book"
+)
+
 type Service interface {
-	GetBookByUUID(ctx context.Context, uuid string)
-	GetAllBooks(ctx context.Context, limit, offset int)
-	CreateBook(ctx context.Context, dto *CreateBookDTO) *Book
+	GetByUUID(ctx context.Context, uuid string) *book.Book
+	GetAll(ctx context.Context, limit, offset int) []*book.Book
+	Create(ctx context.Context, dto *CreateBookDTO) *book.Book
 }

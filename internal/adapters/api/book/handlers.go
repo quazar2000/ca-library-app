@@ -4,8 +4,7 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	adapters "github.com/quazar2000/ca-library-app/internal/adapters/user"
-	"github.com/quazar2000/ca-library-app/internal/book"
+	adapters "github.com/quazar2000/ca-library-app/internal/adapters/api"
 )
 
 const (
