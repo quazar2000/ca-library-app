@@ -1,6 +1,12 @@
 package author
 
+import "ca-library-app/internal/domain/author"
+
 type authorStorage struct {
+}
+
+func NewStorage() author.Storage {
+	return &authorStorage{}
 }
 
 func (bs *authorStorage) GetOne(uuid string) *author.Author {

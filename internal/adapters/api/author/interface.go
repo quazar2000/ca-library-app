@@ -3,7 +3,7 @@ package author
 import (
 	"context"
 
-	"github.com/quazar2000/ca-library-app/internal/domain/author"
+	"ca-library-app/internal/domain/author"
 )
 
 type Service interface {

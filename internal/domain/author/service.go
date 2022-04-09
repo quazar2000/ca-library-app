@@ -3,7 +3,7 @@ package author
 import (
 	"context"
 
-	"github.com/quazar2000/ca-library-app/internal/adapters/api/author"
+	"ca-library-app/internal/adapters/api/author"
 )
 
 type service struct {

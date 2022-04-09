@@ -1,14 +1,19 @@
-package user
+package author
 
 import (
-	adapters "github.com/quazar2000/ca-library-app/internal/adapters/user"
-	"github.com/quazar2000/ca-library-app/internal/book"
+	"ca-library-app/internal/adapters/api"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 type handler struct {
-	bookService book.Service
+	authorService Service
 }
 
-func NewHandler(service book.Service) adapters.Handler {
-	return &handler{bookService: service}
+func NewHandler(service Service) api.Handler {
+	return &handler{authorService: service}
+}
+
+func (h *handler) Register(router *httprouter.Router) {
+	panic("implement me")
 }

@@ -1,9 +1,17 @@
 package book
 
-import "context"
+import (
+	"context"
+
+	"ca-library-app/internal/adapters/api/book"
+
+	"github.com/quazar2000/ca-library-app/internal/adapters/api/author"
+)
 
 type service struct {
-	storage Storage
+	storage       Storage
+	authorService author.Service
+	genreService  genre.Service
 }
 
 func NewService(storage Storage) book.Service {
@@ -11,6 +19,8 @@ func NewService(storage Storage) book.Service {
 }
 
 func (s *service) Create(ctx context.Context, dto *CreateBookDTO) *Book {
+	author := s.authorService.GetByUUID(ctx, dto.AuthorUUID)
+	genre := s.genreService.GetByUUID(ctx, dto.GenreUUID)
 	return nil
 }
 

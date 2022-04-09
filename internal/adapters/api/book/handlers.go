@@ -3,8 +3,9 @@ package user
 import (
 	"net/http"
 
+	"ca-library-app/internal/adapters/api"
+
 	"github.com/julienschmidt/httprouter"
-	adapters "github.com/quazar2000/ca-library-app/internal/adapters/api"
 )
 
 const (
@@ -13,14 +14,14 @@ const (
 )
 
 type handler struct {
-	bookService book.Service
+	bookService Service
 }
 
-func NewHandler(service book.Service) adapters.Handler {
+func NewHandler(service Service) api.Handler {
 	return &handler{bookService: service}
 }
 
-func (h *handler) REgister(router *httprouter.Router) {
+func (h *handler) Register(router *httprouter.Router) {
 	router.GET(booksURL, h.GetAllBooks)
 }
 
