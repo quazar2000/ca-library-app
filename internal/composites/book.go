@@ -1,6 +1,6 @@
 package composites
 
-import {
+import (
 	"github.com/quazar2000/ca-library-app/internal/adapters/api"
 
 	"github.com/quazar2000/ca-library-app/internal/domain/book"
@@ -8,7 +8,7 @@ import {
 	book3 "github.com/quazar2000/ca-library-app/internal/adapters/db/book"
 
 	book2 "github.com/quazar2000/ca-library-app/internal/adapters/api/book"
-}
+)
 
 type BookComposite struct {
 	Storage book.Storage

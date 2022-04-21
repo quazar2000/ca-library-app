@@ -1,4 +1,4 @@
-package user
+package author
 
 type Author struct {
 	UUID string `json:"uuid,omitempty"`
