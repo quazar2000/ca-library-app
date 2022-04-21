@@ -3,7 +3,7 @@ package book
 import (
 	"context"
 
-	"ca-library-app/internal/domain/book"
+	"github.com/quazar2000/ca-library-app/internal/domain/book"
 )
 
 type Service interface {

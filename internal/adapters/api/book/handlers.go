@@ -3,7 +3,7 @@ package user
 import (
 	"net/http"
 
-	"ca-library-app/internal/adapters/api"
+	"github.com/quazar2000/ca-library-app/internal/adapters/api"
 
 	"github.com/julienschmidt/httprouter"
 )

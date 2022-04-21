@@ -1,12 +1,13 @@
 package author
 
-import "ca-library-app/internal/domain/author"
+import "github.com/quazar2000/ca-library-app/internal/domain/author"
 
 type authorStorage struct {
+	db *mongo.Database
 }
 
-func NewStorage() author.Storage {
-	return &authorStorage{}
+func NewStorage(db *mongo.Database) author.Storage {
+	return &authorStorage{db: db}
 }
 
 func (bs *authorStorage) GetOne(uuid string) *author.Author {
